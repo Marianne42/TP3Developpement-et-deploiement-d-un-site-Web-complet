@@ -9,9 +9,9 @@ router.get('/stages', controleursStages.getStages)
 
 //router.get('/stages/:etudiantId', controleursStages.getEtudiantById)
 
-//router.patch('/stages', controleursStages.updateEtudiant)
+router.patch('/stages', controleursStages.updateStage)
 
-//router.delete('/stages', controleursStages.supprimerEtudiant)
+router.delete('/stages', controleursStages.supprimerStage)
 
 //router.patch('/inscription', controleursStages.inscrireEtudiant)
 
