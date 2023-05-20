@@ -2,7 +2,7 @@ const HttpErreur = require("../models/http-erreur");
 
 const Etudiant = require("../models/etudiants");
 
-const Cours = require("../models/cours");
+const stages = require("../models/stages");
 
 
 const getEtudiantById = async (requete, reponse, next) => {
@@ -27,6 +27,7 @@ const creerEtudiant = async (requete, reponse, next) =>{
         nom: requete.body.nom,
         courriel: requete.body.courriel,
         profileSortie: requete.body.profileSortie,
+        idStage: requete.body.idStage
         
     });
 
@@ -44,7 +45,7 @@ const getEtudiant = async (requete, reponse, next) =>{
 }
 
 const updateEtudiant = async (requete, reponse, next) => {
-    const { nom, prenom } = requete.body;
+    const { nom } = requete.body;
     const etudiantId = requete.body.etudiantId;
   
     let etudiant;
@@ -52,7 +53,6 @@ const updateEtudiant = async (requete, reponse, next) => {
     try {
       etudiant = await Etudiant.findById(etudiantId);
       etudiant.nom = nom;
-      etudiant.prenom = prenom;
       await etudiant.save();
     } catch {
       return next(
@@ -64,12 +64,12 @@ const updateEtudiant = async (requete, reponse, next) => {
   };
 
   const inscrireEtudiant = async (requete, reponse, next) => {
-    const { cours, etudiantId } = requete.body;
+    const { stage, etudiantId } = requete.body;
     let etudiant;
   
     try {
       etudiant = await Etudiant.findById(etudiantId);
-      etudiant.cours.push(cours);
+      etudiant.stage.push(stage);
       await etudiant.save();
     } catch {
       return next(
@@ -78,9 +78,9 @@ const updateEtudiant = async (requete, reponse, next) => {
     }
 
     try {
-      coursInscrit = await Cours.findById(cours);
-      coursInscrit.listeEtudiants.push(etudiantId);
-      await coursInscrit.save();
+        stageInscrit = await stages.findById(cours);
+        stageInscrit.listeEtudiants.push(etudiantId);
+      await stageInscrit.save();
     } catch {
       return next(
         new HttpErreur("Erreur lors de la mise à jour du cours", 500)

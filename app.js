@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
 mongoose.set('strictQuery', true);
 
-const RouteStages = require('./routes/stages-routes')
+const RouteStages = require('./routes/stages-route')
 const RouteEtudiants = require('./routes/etudiants-route')
 const HttpErreur = require("./models/http-erreur");
 
