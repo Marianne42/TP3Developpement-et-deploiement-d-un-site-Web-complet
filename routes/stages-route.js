@@ -3,9 +3,9 @@ const express = require("express");
 const controleursStages = require("../controlers/controlStages")
 const router = express.Router();
 
-//router.post('/stages', controleursStages.creerStages)
+router.post('/stages', controleursStages.creerStages)
 
-//router.get('/stages', controleursStages.getEtudiant)
+router.get('/stages', controleursStages.getStages)
 
 //router.get('/stages/:etudiantId', controleursStages.getEtudiantById)
 
