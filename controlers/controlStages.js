@@ -3,9 +3,10 @@ const HttpErreur = require("../models/http-erreur");
 const Etudiant = require("../models/etudiants");
 
 const Stages = require("../models/stages");
+const stages = require("../models/stages");
 
 const creerStages = async (requete, reponse, next) =>{
-    const nouveauStage = new Stage({
+    const nouveauStage = new Stages({
         nomContact: requete.body.nomContact,
         courriel: requete.body.courriel,
         numTelephone: requete.body.numTelephone,
@@ -15,7 +16,7 @@ const creerStages = async (requete, reponse, next) =>{
         nbrPosteDispo: requete.body.nbrPosteDispo,
         Description: requete.body.Description,
         remuneration: requete.body.remuneration,
-        listeEtudiant: requete.body.listeEtudiant
+        listeEtudiants: requete.body.listeEtudiants
         
     });
 

@@ -26,13 +26,13 @@ const creerEtudiant = async (requete, reponse, next) =>{
         NumDa: requete.body.NumDa,
         nom: requete.body.nom,
         courriel: requete.body.courriel,
-        profileSortie: requete.body.profileSortie,
+        profilSortie: requete.body.profilSortie,
         idStage: requete.body.idStage
         
     });
 
     const resultat = await nouveauEtudiant.save();
-
+    
     reponse.json(resultat);
 }
 
@@ -66,26 +66,83 @@ const updateEtudiant = async (requete, reponse, next) => {
   const inscrireEtudiant = async (requete, reponse, next) => {
     const { stage, etudiantId } = requete.body;
     let etudiant;
-  
+    let stageInscrit;
     try {
+      stageInscrit = await stages.findById(stage);
+      if (stageInscrit.listeEtudiants.length >= stageInscrit.nbrPosteDispo){
+        
+        throw new Error("too much etudiants")
+                
+      }
       etudiant = await Etudiant.findById(etudiantId);
-      etudiant.stage.push(stage);
-      await etudiant.save();
-    } catch {
-      return next(
-        new HttpErreur("Erreur lors de la mise à jour de l'etudiant", 500)
-      );
+      if(etudiant.idStage != null){
+        throw new Error("Deja Stage")
+      }
+    } catch (err){
+      switch(err.message){
+        case "Deja Stage": 
+        return next(
+          new HttpErreur("A deja un stage", 500)
+        );
+        case "too much etudiants": 
+        return next(
+          new HttpErreur("Trop d'étudiants dans le stage", 500)
+        );
+        default:
+          return next(
+          new HttpErreur("Erreur lors de la mise à jour du stage", 500)
+        );
+      }
+    }
+    
+    try {
+      stageInscrit = await stages.findById(stage);
+
+      if (stageInscrit.listeEtudiants.length >= stageInscrit.nbrPosteDispo){
+        
+        throw new Error("too much etudiants")
+                
+      }
+      
+      stageInscrit.listeEtudiants.push(etudiantId);
+      await stageInscrit.save();
+    } catch (err) {
+      switch(err.message){
+        case "too much etudiants": 
+        return next(
+          new HttpErreur("Trop d'étudiants dans le stage", 500)
+        );
+        default:
+          return next(
+          new HttpErreur("Erreur lors de la mise à jour du stage", 500)
+        );
+      }
+      
     }
 
     try {
-        stageInscrit = await stages.findById(cours);
-        stageInscrit.listeEtudiants.push(etudiantId);
-      await stageInscrit.save();
-    } catch {
-      return next(
-        new HttpErreur("Erreur lors de la mise à jour du cours", 500)
-      );
+      
+      etudiant = await Etudiant.findById(etudiantId);
+      if(etudiant.idStage != null){
+        throw new Error("Deja Stage")
+      }
+      etudiant.idStage = stage;
+
+      await etudiant.save();
+    } catch (err) {
+      switch(err.message){
+        case "Deja Stage": 
+        return next(
+          new HttpErreur("A deja un stage", 500)
+        );
+        default:
+        return next(
+          new HttpErreur("Erreur lors de la mise à jour de l'etudiant", 500)
+        );
+      }
     }
+
+    
   
     reponse.status(200).json({ etudiant: etudiant.toObject({ getters: true }) });
   };

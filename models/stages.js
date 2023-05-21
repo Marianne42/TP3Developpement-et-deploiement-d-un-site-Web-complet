@@ -10,7 +10,7 @@ const stageSchema = new mongoose.Schema({
     nbrPosteDispo: {type: Number, required: true},
     Description: {type: String, required: true},
     remuneration: {type: String, enum: ['salaire horaire', 'montant unique', 'aucune rémunération'], required: true},
-    listeEtudiant: [{type: mongoose.Types.ObjectId, required: false, ref:"etudiants"}]
+    listeEtudiants: [{type: mongoose.Types.ObjectId, required: false, ref:"etudiants", default:[]}]
 });
 
 module.exports = mongoose.model("stages", stageSchema);
