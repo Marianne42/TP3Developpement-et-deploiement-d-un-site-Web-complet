@@ -3,7 +3,7 @@ import React from "react";
 
 function Deroulement() {
     return (
-        <div>
+        <div className="text_blanc">
         <h4>Édition  - Directives pour les étudiants</h4>
         <p>Tâches à effectuer par l'étudiant à la session d'automne  (c'est-à-dire maintenant):</p>
         <br/> <br/>
@@ -62,11 +62,12 @@ function Deroulement() {
                 <br/><br/>
 
                   Déroulement des stages / Horaire de travail
+                  <li>
             Les stages ont lieu durant la session d'hiver.
             Ils sont d'une durée de 15 semaines, du x janvier au y mai 2024.
             Vous trouverez les détails dans la section "Les profils du programme
-            informatique, les dates et les spécificités des stages".
-            
+            informatique, les dates et les spécificités des stages".</li>
+            <li>
             Le stagiaire est tenu de respecter l'horaire  
             régulier de l'entreprise et des employés occupant des fonctions similaires.
             Pendant une semaine normale de travaille un stagiaire doit faire entre 35 et 40 heures.
@@ -74,35 +75,36 @@ function Deroulement() {
             doivent reprendre les heures manquantes en débutant leur stage plus tôt ou en terminant 
             plus tard (après entente avec le coordonnateur des stages et le professeur-superviseur).
             Un étudiant qui profite de cette règle ne peut terminer son stage après la 
-            date de présentation des stages.
+            date de présentation des stages.</li>
+            <li>
             Les étudiants qui font plus de 40 heures par 
             semaine pourront terminer leur stage plus tôt (après entente avec le coordonnateur et le
-            professeur-superviseur).
-
+            professeur-superviseur).</li>
+            <li>
             Pendant les journées pédagogiques et les journées
             de rattrapage (lecture) identifiées sur le calendrier scolaire, le stagiaire
             est tenu d'être présent en milieu de stage.
             Il est possible de débuter le stage plus tôt (que la date prévue) après entente entre
             l'étudiant, le coordonnateur et l'employeur (un stage ne peut débuter plus tôt que le 
-            premier lundi de janvier de l'année du stage)
-            
+            premier lundi de janvier de l'année du stage)</li>
+            <li>
             Il y aura deux rencontres obligatoires en ligne
             Vendredi 12h00-13h00 en janvier avant le début des stages.
           Vendredi 12h00-13h00 vers le milieu du stage 
-            (la date sera communiquée plus tard).
-            
+            (la date sera communiquée plus tard).</li>
+            <li>
             Les étudiants doivent remettre un rapport hebdomadaire 
             décrivant leurs tâches de la semaine au plus tard le lundi suivant 
             avant 11h00 AM (il est suggéré de remettre ce rapport
             le vendredi en fin d'après-midi en terminant la semaine). Ce rapport est 
             envoyé par courriel au professeur superviseur. Le format du rapport 
-            sera discuté avec le professeur superviseur de l'étudiant.
-            
+            sera discuté avec le professeur superviseur de l'étudiant.</li>
+            <li>
             Le professeur superviseur contactera l'étudiant (selon l'horaire
             préalablement établit avec l'étudiant) à chaque semaine.
             Le professeur-superviseur rencontre les
             étudiants à chaque deux semaines (à moins d'une entente 
-            particulière avec le superviseur de l'entreprise).
+            particulière avec le superviseur de l'entreprise).</li>
             
             <li>
             À la fin des stages (habituellement dans la semaine

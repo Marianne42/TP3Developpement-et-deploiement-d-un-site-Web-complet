@@ -45,7 +45,7 @@ function Accueil() {
         </p>
       </header>
       <footer>
-        
+        <p>Nom du coordinateur: Sylvain Labranche // Courriel du coordinateur: Sylabranche@cmontmorency.qc.ca // Date de modification: 2023-05-21</p>
       </footer>
     </div>
   );

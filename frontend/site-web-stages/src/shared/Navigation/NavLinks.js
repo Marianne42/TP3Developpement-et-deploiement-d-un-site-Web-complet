@@ -20,6 +20,12 @@ function NavLinks(props) {
     <li>
       <NavLink to="/FAQ">FAQ</NavLink>
     </li>
+    <li>
+      <NavLink to="/Profile">Profile</NavLink>
+    </li>
+    <li>
+      <NavLink to="/FormulaireEmployeur">Formulaire des Employeurs</NavLink>
+    </li>
   </ul>
 };
 

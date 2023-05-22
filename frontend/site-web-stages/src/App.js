@@ -14,6 +14,9 @@ import { useState } from "react";
 import "./Accueil.css";
 import Deroulement from "./Deroulement";
 import FAQ from "./FAQ";
+import ProfileMore from "./ProfileMore";
+import FormulaireEmployeur from "./FormulaireEmployeur";
+
 
 export var COURS;
 export var set_COURS;
@@ -149,23 +152,23 @@ function App() {
           </Route>
           <Route path="/professeurs" exact>
             <Utilisateurs
-              professeur={professeurs}
-              ajouterProfesseur={ajouterProfesseur}
-              getCours={getCours}
+              //professeur={professeurs}
+              //ajouterProfesseur={ajouterProfesseur}
+              //getCours={getCours}
             />
           </Route>
           <Route path="/session/:numsession" exact>
             <Cours
-              cours={COURS}
-              ajouterCours={ajouterCours}
-              professeur={professeurs}
+              //cours={COURS}
+              //ajouterCours={ajouterCours}
+              //professeur={professeurs}
             />
           </Route>
           <Route path="/cours/:coursId" exact>
             <PageCours
-              getCours={getCours}
-              getProfesseur={getProfesseur}
-              ajouterEtudiantA={ajouterEtudiantA}
+              //getCours={getCours}
+              //getProfesseur={getProfesseur}
+              //ajouterEtudiantA={ajouterEtudiantA}
             />
           </Route>
           <Route path="/Deroulements" exact>
@@ -175,6 +178,17 @@ function App() {
           </Route>
           <Route path="/FAQ" exact>
             <FAQ
+              
+            />
+          </Route>
+          <Route path="/Profile" exact>
+            <ProfileMore
+              
+            />
+          </Route>
+          
+          <Route path="/FormulaireEmployeur" exact>
+            <FormulaireEmployeur
               
             />
           </Route>
