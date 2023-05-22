@@ -5,7 +5,7 @@ const Etudiant = require("../models/etudiants");
 const stages = require("../models/stages");
 
 
-/*const getEtudiantById = async (requete, reponse, next) => {
+const getEtudiantById = async (requete, reponse, next) => {
   const etudiantId = requete.params.etudiantId;
   let etudiant;
   try {
@@ -19,7 +19,7 @@ const stages = require("../models/stages");
     return next(new HttpErreur("Aucun etudiant trouvée pour l'id fourni", 404));
   }
   reponse.json({ etudiant: etudiant.toObject({ getters: true }) });
-};*/
+};
 
 const creerEtudiant = async (requete, reponse, next) =>{
     const nouveauEtudiant = new Etudiant({
@@ -147,7 +147,7 @@ const updateEtudiant = async (requete, reponse, next) => {
     reponse.status(200).json({ etudiant: etudiant.toObject({ getters: true }) });
   };
 
-  /*const supprimerEtudiant = async (requete, reponse, next) => {
+  const supprimerEtudiant = async (requete, reponse, next) => {
     const etudiantId = requete.params.etudiantId;
     let etudiant;
     try {
@@ -174,7 +174,7 @@ const updateEtudiant = async (requete, reponse, next) => {
       );
     }
     reponse.status(200).json({ message: "Etudiant supprimée" });
-  };*/
+  };
 
   exports.creerEtudiant = creerEtudiant;
   exports.getEtudiant = getEtudiant;

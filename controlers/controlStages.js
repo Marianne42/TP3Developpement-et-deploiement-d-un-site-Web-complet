@@ -53,7 +53,7 @@ const updateStage = async (requete, reponse, next) => {
     reponse.status(200).json({ stage: stage.toObject({ getters: true }) });
   };
 
-  /*const supprimerStage = async (requete, reponse, next) => {
+  const supprimerStage = async (requete, reponse, next) => {
     const stageId = requete.params.stageId;
     let stage;
     try {
@@ -80,7 +80,7 @@ const updateStage = async (requete, reponse, next) => {
       );
     }
     reponse.status(200).json({ message: "Etudiant supprimée" });
-  };*/
+  };
 
 
 

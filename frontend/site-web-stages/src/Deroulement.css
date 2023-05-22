@@ -29,3 +29,7 @@ a {
   a:hover {
     color: rgb(165, 38, 101);
   }
+
+  .retrait_petit{
+    text-indent: 1cm;
+  }
