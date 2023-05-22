@@ -6,11 +6,13 @@ function ProfileMore() {
     return ( 
         //<a> Liens avec ancrage pour afficher selon le profil </a>
         <div className="background_color_profile">
-        <div className="text_blanc">
+        
         
 
-        <h4>Nos étudiants en Gestion de réseaux et sécurité ont suivi des cours leur permettant de:</h4>
+        <h4 className='h4Profile'>Nos étudiants en Gestion de réseaux et sécurité ont suivi des cours leur permettant de:</h4>
+        <div className="text_blanc">
         gérer des réseaux informatiques et offrir du soutien aux personnes qui utilisent des ordinateurs et des réseaux, c’est-à-dire:
+        
         <ul>
             <li>monter un serveur</li>
             <li>planifier et implanter un réseau</li>
@@ -33,10 +35,12 @@ function ProfileMore() {
         <li>la résolution de problèmes de réseaux sur les équipements informatiques</li>
         <li>préparation à la certification CEH (Certified Ethical Hacker)</li>
         </ul></li></ul>
+        </div>
 
-        <h4>OU</h4>
+        <h4 className='h4Profile'>OU</h4>
 
-        <h4>Nos étudiant en Développement d'applications informatiques ont suivi des cours leur permettant de:</h4>
+        <h4 className='h4Profile'>Nos étudiant en Développement d'applications informatiques ont suivi des cours leur permettant de:</h4>
+        <div className="text_blanc">
         <ul>
         <li>participer à l’analyse des systèmes à implanter</li>
         <li>détecter les problèmes, en dégager la structure et trouver les solutions logiques</li>

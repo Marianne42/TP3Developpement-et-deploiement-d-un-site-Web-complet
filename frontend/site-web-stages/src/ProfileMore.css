@@ -9,6 +9,15 @@
 
 }
 
+.h4Profile{
+    text-shadow:#ffae00 2.5px 2.5px 0,
+#ff00c0 5px 5px 0,
+#aa0306 7.5px 7.5px 0,
+#333 10.5px 10.5px 10px;color:#FFDB57;
+padding: 20px 150px; 
+    
+}
+
 .background_color_profile{
     background-color: rgb(113, 180, 174);
 }

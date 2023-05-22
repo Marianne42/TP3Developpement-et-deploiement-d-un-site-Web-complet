@@ -5,7 +5,7 @@ function FormulaireEmployeur() {
     return (
         <div className="background_color">
            <div className="text_blanc"> 
-        <h2>Formulaire d'inscription de milieu de stage</h2>
+        <h2 className="h2Formulaire">Formulaire d'inscription de milieu de stage</h2>
         <p>Stages réguliers ayant lieu à la session hiver </p>
         <p>Les stages sont du 21 janvier au 3 mai 2019 </p>
 

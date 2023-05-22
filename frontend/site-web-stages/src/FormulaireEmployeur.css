@@ -12,3 +12,11 @@
 .background_color{
     background-color: rgb(245, 110, 110);
 }
+
+.h2Formulaire{
+    text-shadow:#ff006e 2.5px 2.5px 0,
+    #8338ec 5px 5px 0,
+    #3a86ff 7.5px 7.5px 0,
+    #333 10px 10px 10px;color:#ffcc00;
+
+}
