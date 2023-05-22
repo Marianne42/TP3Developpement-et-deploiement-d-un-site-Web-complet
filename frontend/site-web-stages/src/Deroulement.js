@@ -7,7 +7,7 @@ function Deroulement() {
         <div className="background_color_deroulement">
         <div className="text_blanc">
            
-        <h4>Édition  - Directives pour les étudiants</h4>
+        <h4>Édition 2023 - Directives pour les étudiants</h4>
         <p>Tâches à effectuer par l'étudiant à la session d'automne  (c'est-à-dire maintenant):</p>
         <br/> <br/>
         -Au plus tard le mardi 18 septembre à 12h00: Produire un CV que vous devez remettre au coordonnateur des stages (Sylvain Labranche). 
