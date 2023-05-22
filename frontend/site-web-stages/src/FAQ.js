@@ -1,7 +1,9 @@
 import React from "react";
+import './FAQ.css';
 
 function FAQ() {
     return (
+        <div className="background_color_FAQ">
         <div className="text_blanc"><h2>Foire aux questions - FAQ</h2>
 			   <h4>Est-ce que le stage est obligatoire?</h4>
 				 
@@ -25,7 +27,7 @@ function FAQ() {
                
 			   <p>- Les stages sont prévus du 21 janvier au 3 mai 2019.</p>
 
-               </div>
+               </div></div>
     );
 }
 

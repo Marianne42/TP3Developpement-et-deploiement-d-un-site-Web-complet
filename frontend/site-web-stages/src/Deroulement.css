@@ -9,6 +9,23 @@
 
 }
 
-.background_color{
-    background-color: rgb(136, 136, 136);
+.background_color_deroulement{
+    background-color: rgb(53, 175, 59);
 }
+
+.retrait_petit{
+    background-color: rgb(125, 196, 128);
+}
+
+a {
+    color: rgb(221, 116, 169);
+  }
+
+  a:link {
+    color: red;
+  }
+  
+  
+  a:hover {
+    color: rgb(165, 38, 101);
+  }

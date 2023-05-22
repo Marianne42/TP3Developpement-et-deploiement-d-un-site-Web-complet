@@ -1,9 +1,12 @@
 
 import React from "react";
+import "./Deroulement.css"
 
 function Deroulement() {
     return (
+        <div className="background_color_deroulement">
         <div className="text_blanc">
+           
         <h4>Édition  - Directives pour les étudiants</h4>
         <p>Tâches à effectuer par l'étudiant à la session d'automne  (c'est-à-dire maintenant):</p>
         <br/> <br/>
@@ -17,22 +20,22 @@ function Deroulement() {
               
               Pour chaque employeur que vous contactez vous devez inscrire ses coordonnées sur le formulaire
               
-              Fichier en format <a href="../documents/contact_employeurs.docx">Word.</a>
+              Fichier en format <a href="../documents/contact_employeurs.docx"> Word.</a>
               
               Lorsque vous rencontrez un employeur (entrevue) vous devez remplir le formulaire 
-              <a href="../documents/rencontre_employeur.pdf">&laquo;rencontre&nbsp;employeur&raquo;</a>.
+              <a href="../documents/rencontre_employeur.pdf"> &laquo;rencontre&nbsp;employeur&raquo;</a>.
               
-              <li>Fichier en format <a href="../documents/rencontre_employeur.docx">Word.</a></li>
+              <li>Fichier en format <a href="../documents/rencontre_employeur.docx"> Word.</a></li>
               
               Vous devez rencontrer au moins trois (3) employeurs, à moins bien sûr que vous ayez 
               trouvé votre stage avant. Vous devriez avoir au moins trois formulaires &laquo;rencontre&raquo;, 
               un par employeur rencontré.
               
               Au plus tard le vendredi 2 novembre à 12h00: remettre vos formulaires &laquo;contact&nbsp;employeurs&raquo; et 
-              &laquo;rencontre&nbsp;employeur&raquo; remplis:
+               &laquo;rencontre&nbsp;employeur&raquo; remplis:
                   Dans colnet (dans un fichier .ZIP, comme indiqué ci-haut, n'oubliez pas d'inclure tous les formulaires &laquo;contact&raquo;
                   et &laquo;rencontre&raquo; en format Word) 
-
+                  
               Ainsi le 2 novembre, vous devriez avoir trouvé votre stage.
             
             
@@ -44,17 +47,17 @@ function Deroulement() {
             (stages) je vous invite à consulter les différentes sections du site Web dans le menu de droite.
               
            Lisez ce document concernant 
-                <a href="../documents/Code_ethique_presentation_stages.pdf">l'éthique et les dates (pour Hiver 2019)</a>
+                <a href="../documents/Code_ethique_presentation_stages.pdf"> l'éthique et les dates (pour Hiver 2019)</a>
   
                 <p >Plus de détails pour les 
                 <a href="rapports_techniques.php"> rapports techniques</a></p> 			      
               <li>TRÈS IMPORTANT: pour toute communication par courriel avec le coordonnateur
-                  vous devez inscrire dans le sujet du message:</li>  
-                  <li class="retrait petit">SUJET: Stages profil #DA nom - raison</li>
-                  <li class="retrait petit">profil est soit réseaux, soit prog</li>
-                  <li class="retrait petit">#DA est votre numéro d'admission</li>
-                  <li class="retrait petit">nom est votre nom</li>
-                  <li class="retrait petit">par exemple: Stages réseaux 201014109 Joe Larue - contenu CV</li>  
+                  vous devez inscrire dans le sujet du message:</li><ul>  
+                  <li class="retrait_petit">SUJET: Stages profil #DA nom - raison</li>
+                  <li class="retrait_petit">profil est soit réseaux, soit prog</li>
+                  <li class="retrait_petit">#DA est votre numéro d'admission</li>
+                  <li class="retrait_petit">nom est votre nom</li>
+                  <li class="retrait_petit">par exemple: Stages réseaux 201014109 Joe Larue - contenu CV</li> </ul> 
                   <li>N'oubliez pas d'inscrire la raison du message (après le tiret).</li>
                   <li>Si ces conditions ne sont pas respectées, j'ignorerai le courriel et je ne répondrai pas.</li>
   
@@ -114,7 +117,7 @@ function Deroulement() {
             (les personnes intéressées devraient convenir de l'horaire avec le professeur-superviseur).</li>
 			  
               
-              </div>
+              </div></div>
     );
 }
 

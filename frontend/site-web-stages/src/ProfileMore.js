@@ -1,9 +1,11 @@
 
 import React from 'react';
+import "./ProfileMore.css";
 
 function ProfileMore() {
     return ( 
         //<a> Liens avec ancrage pour afficher selon le profil </a>
+        <div className="background_color_profile">
         <div className="text_blanc">
         
 
@@ -57,7 +59,7 @@ function ProfileMore() {
         <li>le développement pour plateforme mobile</li>
         <li>l’assurance qualité logiciel</li>
         </ul></li></ul>
-        </div>
+        </div></div>
     );
 }
 

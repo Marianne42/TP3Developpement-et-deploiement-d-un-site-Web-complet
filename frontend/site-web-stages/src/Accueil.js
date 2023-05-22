@@ -4,8 +4,8 @@ import "./Accueil.css";
 
 function Accueil() {
   return (
-    <div className="background_color">
-      <header className="background_color">
+    <div className="background_color_menu">
+      <header className="background_color_menu">
       <a href="https://www.cmontmorency.qc.ca/">
         <img src={logoMomo} className="App-logo" alt="logo" />
         </a>
